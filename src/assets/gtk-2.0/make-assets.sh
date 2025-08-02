@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 for theme in '' '-Purple' '-Pink' '-Red' '-Orange' '-Yellow' '-Green' '-Teal' '-Grey'; do
   for color in '' '-Dark'; do
-    for type in '' '-Nord' '-Dracula' '-Gruvbox' '-Everforest' '-Catppuccin'; do
+    for type in '' '-Nord' '-Dracula' '-Gruvbox' '-Everforest' '-Catppuccin' '-Rosepine'; do
       if [[ "$color" == '' ]]; then
         case "$theme" in
           '')
@@ -361,12 +361,12 @@ for theme in '' '-Purple' '-Pink' '-Red' '-Orange' '-Yellow' '-Green' '-Teal' '-
 
         if [[ "$type" == "-Catppuccin" ]]; then
           background_color='#292c3c'
-          case "$theme" in 
+          case "$theme" in
             '')
               theme_color='#8caaee'
               ;;
             -Purple)
-              theme_color='#ca9ee6'
+              theme_color='#b4befe'
               ;;
             -Pink)
               theme_color='#f4b8e4'
@@ -391,6 +391,38 @@ for theme in '' '-Purple' '-Pink' '-Red' '-Orange' '-Yellow' '-Green' '-Teal' '-
               ;;
           esac
         fi
+      fi
+
+      if [[ "$type" == '-Rosepine' ]]; then
+        background_color='#272e33'
+        case "$theme" in
+          '')
+            theme_color='#31748f'
+            ;;
+          -Purple)
+            theme_color='#c4a7e7'
+            ;;
+          -Pink)
+            theme_color='#f5bde6'
+            ;;
+          -Red)
+            theme_color='#eb6f92'
+            ;;
+          -Orange)
+            theme_color='#ebbcba'
+            ;;
+          -Yellow)
+            theme_color='#f6c177'
+            ;;
+          -Green)
+            theme_color='#a6d189'
+            ;;
+          -Teal)
+            theme_color='#9ccfd8'
+            ;;
+          -Grey)
+            theme_color='#e0def4'
+        esac
       fi
 
       if [[ "$type" != '' ]]; then

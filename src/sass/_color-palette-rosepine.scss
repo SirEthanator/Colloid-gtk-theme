@@ -1,0 +1,71 @@
+// Default Theme Color Palette Rose Pine
+// Red
+$red-light: #eb6f92;
+$red-dark: #b4637a;
+
+// Pink (missing on Rose Pine - taken from Catppuccin)
+$pink-light: #f5bde6;
+$pink-dark: #ea76cb;
+
+// Purple
+$purple-light: #c4a7e7;
+$purple-dark: #907aa9;
+
+// Blue
+$blue-light: #31748f;
+$blue-dark: #3A94C5;
+
+// Teal (aqua)
+$teal-light: #9ccfd8;
+$teal-dark: #56949f;
+
+// Green (missing on Rose Pine - taken from Catppuccin)
+$green-light: #a6d189;
+$green-dark: #40a02b;
+
+// Yellow
+$yellow-light: #f6c177;
+$yellow-dark: #ea9d34;
+
+// Orange
+$orange-light: #ebbcba;
+$orange-dark: #d7827e;
+
+// Grey
+$grey-050: #fdfbf8;
+$grey-100: #fcf8f4;
+$grey-150: #fbf6f1;
+$grey-200: #faf4ed;
+$grey-250: #fffaf3;
+$grey-300: #f2e9e1;
+$grey-350: #9893a5;
+$grey-400: #56526e;
+$grey-450: #524f67;
+$grey-500: #403d52;
+$grey-550: #393552;
+$grey-600: #2a273f;
+$grey-650: #232136;
+$grey-700: #1f1d2e;
+$grey-750: #1C1A29;
+$grey-800: #191724;
+$grey-850: #14121d;
+$grey-900: #0f0e16;
+$grey-950: #0a090e;
+
+// White
+$white: #e0def4;
+
+// Black
+$black: #191724;
+
+// Button
+$button-close: if($variant == 'light', $red-dark, $red-light);
+$button-max: if($variant == 'light', $green-dark, $green-light);
+$button-min: if($variant == 'light', $yellow-dark, $yellow-light);
+
+// Link
+$links: $blue-dark;
+
+// Theme
+$default-light: $blue-light;
+$default-dark: $blue-dark;

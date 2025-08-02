@@ -9,8 +9,8 @@ $pink-light: #f4b8e4;
 $pink-dark: #ea76cb;
 
 // Purple
-$purple-light: #ca9ee6;
-$purple-dark: #8839ef;
+$purple-light: #b4befe;
+$purple-dark: #7287fd;
 
 // Blue
 $blue-light: #8caaee;
@@ -33,28 +33,28 @@ $orange-light: #ef9f76;
 $orange-dark: #fe640b;
 
 // Grey
-$grey-050: #eff1f5;
-$grey-100: #e6e9ef;
-$grey-150: #dce0e8;
-$grey-200: #ccd0da;
-$grey-250: #bcc0cc;
-$grey-300: #acb0be;
-$grey-350: #9ca0b0;
-$grey-400: #8c8fa1;
-$grey-450: #7c7f93;
-$grey-500: #6c6f85;
-$grey-550: #5c5f77;
-$grey-600: #4c4f69;
-$grey-650: #303446;
-$grey-700: #292c3c;
-$grey-750: #24273a;
-$grey-800: #232634;
-$grey-850: #1e1e2e;
-$grey-900: #181825;
+$grey-050: #f5f7fd;
+$grey-100: #ebeffb;
+$grey-150: #e1e6f8;
+$grey-200: #d7def6;
+$grey-250: #cdd6f4;
+$grey-300: #bac2de;
+$grey-350: #a6adc8;
+$grey-400: #9399b2;
+$grey-450: #7f849c;
+$grey-500: #6c7086;
+$grey-550: #585b70;
+$grey-600: #45475a;
+$grey-650: #313244;
+$grey-700: #1e1e2e;
+$grey-750: #1B1B2A;
+$grey-800: #181825;
+$grey-850: #13131E;
+$grey-900: #161622;
 $grey-950: #11111b;
 
 // White
-$white: #eff1f5;
+$white: #cdd6f4;
 
 // Black
 $black: #11111b;
@@ -65,7 +65,7 @@ $button-max: if($variant == 'light', $green-dark, $green-light);
 $button-min: if($variant == 'light', $yellow-dark, $yellow-light);
 
 // Link
-$links: if($variant == 'light', #04a5e5, #99d1db);
+$links: if($variant == 'light', $blue-dark, $blue-light);
 
 // Theme
 $default-light: $blue-light;
