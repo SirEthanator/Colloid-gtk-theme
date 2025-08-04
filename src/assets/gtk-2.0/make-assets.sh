@@ -1,4 +1,7 @@
 #! /usr/bin/env bash
+
+. ./material-colours
+
 for theme in '' '-Purple' '-Pink' '-Red' '-Orange' '-Yellow' '-Green' '-Teal' '-Grey'; do
   for color in '' '-Dark'; do
     for type in '' '-Nord' '-Dracula' '-Gruvbox' '-Everforest' '-Catppuccin' '-Rosepine'; do
@@ -197,6 +200,38 @@ for theme in '' '-Purple' '-Pink' '-Red' '-Orange' '-Yellow' '-Green' '-Teal' '-
               ;;
           esac
         fi
+        if [[ "$type" == "-Material" ]]; then
+          background_color="$material_l_background"
+          case "$theme" in
+            '')
+              theme_color="$material_l_primary"
+              ;;
+            -Purple)
+              theme_color="$material_l_purple"
+              ;;
+            -Pink)
+              theme_color="$material_l_pink"
+              ;;
+            -Red)
+              theme_color="$material_l_red"
+              ;;
+            -Orange)
+              theme_color="$material_l_orange"
+              ;;
+            -Yellow)
+              theme_color="$material_l_yellow"
+              ;;
+            -Green)
+              theme_color="$material_l_green"
+              ;;
+            -Teal)
+              theme_color="$material_l_teal"
+              ;;
+            -Grey)
+              theme_color="$material_l_grey"
+              ;;
+          esac
+        fi
       else
         case "$theme" in
           '')
@@ -388,6 +423,39 @@ for theme in '' '-Purple' '-Pink' '-Red' '-Orange' '-Yellow' '-Green' '-Teal' '-
               ;;
             -Grey)
               theme_color='#ccd0da'
+              ;;
+          esac
+        fi
+
+        if [[ "$type" == "-Material" ]]; then
+          background_color="$material_d_background"
+          case "$theme" in
+            '')
+              theme_color="$material_d_primary"
+              ;;
+            -Purple)
+              theme_color="$material_d_purple"
+              ;;
+            -Pink)
+              theme_color="$material_d_pink"
+              ;;
+            -Red)
+              theme_color="$material_d_red"
+              ;;
+            -Orange)
+              theme_color="$material_d_orange"
+              ;;
+            -Yellow)
+              theme_color="$material_d_yellow"
+              ;;
+            -Green)
+              theme_color="$material_d_green"
+              ;;
+            -Teal)
+              theme_color="$material_d_teal"
+              ;;
+            -Grey)
+              theme_color="$material_d_grey"
               ;;
           esac
         fi

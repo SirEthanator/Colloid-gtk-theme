@@ -31,7 +31,7 @@ SASSC_OPT="-M -t expanded"
 
 THEME_NAME=Colloid
 THEME_VARIANTS=('' '-Purple' '-Pink' '-Red' '-Orange' '-Yellow' '-Green' '-Teal' '-Grey')
-SCHEME_VARIANTS=('' '-Nord' '-Dracula' '-Gruvbox' '-Everforest' '-Catppuccin' '-Rosepine')
+SCHEME_VARIANTS=('' '-Nord' '-Dracula' '-Gruvbox' '-Everforest' '-Catppuccin' '-Rosepine' '-Material')
 COLOR_VARIANTS=('' '-Light' '-Dark')
 SIZE_VARIANTS=('' '-Compact')
 
@@ -82,7 +82,7 @@ OPTIONS:
                           2. fixed                       Using fixed theme colors (that will break light/dark mode switch)
 
   --tweaks                Specify versions for tweaks
-                          1. [nord|dracula|gruvbox|everforest|catppuccin|rose_pine|all] Color Scheme
+                          1. [nord|dracula|gruvbox|everforest|catppuccin|rosepine|material|all] Color Scheme
                           2. black                       Blackness color version
                           3. rimless                     Remove the 1px border about windows and menus
                           4. normal                      Normal windows button style like gnome default theme (titlebuttons: max/min/close)
@@ -373,6 +373,12 @@ while [[ $# -gt 0 ]]; do
             echo -e "\nRose Pine ColorScheme version! ..."
             shift
             ;;
+          material)
+            colorscheme='true'
+            schemes+=("${SCHEME_VARIANTS[7]}")
+            echo -e "\nMaterial ColorScheme version! ..."
+            shift
+            ;;
           all)
             colorscheme='true'
             schemes+=("${SCHEME_VARIANTS[@]}")
@@ -498,6 +504,8 @@ color_schemes() {
       -Rosepine)
         scheme_color='rosepine'
         ;;
+      -Material)
+        scheme_color='material'
     esac
     sed -i "/\@import/s/color-palette-default/color-palette-${scheme_color}/" "${SRC_DIR}/sass/_tweaks-temp.scss"
     sed -i "/\$colorscheme:/s/default/${scheme_color}/" "${SRC_DIR}/sass/_tweaks-temp.scss"
