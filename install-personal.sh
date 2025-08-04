@@ -1,5 +1,6 @@
 #!/bin/bash
 
+ROOT="$( cd -- "$(dirname "$0")" || exit 1 > /dev/null 2>&1 ; pwd -P )"
 DEST_DIR="$HOME/Hyprland-Dots/.themes"
 BACKUP_DIR="$DEST_DIR/bak"
 
@@ -28,15 +29,28 @@ themes['rosepine']='teal'
 themes['catppuccin']='purple'
 themes['material']=''
 
-for theme in "${!themes[@]}"; do
+if [[ -n "$1" ]]; then
+  iter=("$1")
+else
+  iter=("${!themes[@]}")
+fi
+
+for theme in "${iter[@]}"; do
   args=(-d "$DEST_DIR" --tweaks "$theme" -c standard)
   if [[ -n "${themes[$theme]}" ]]; then
-    args+=(-t)
-    args+=("${themes[$theme]}")
+    args+=(-t "${themes[$theme]}")
   fi
-  # ./install.sh -d "$DEST_DIR" -t "${themes[$theme]}" --tweaks "$theme" -c standard
-  ./install.sh "${args[@]}"
+
+  if [[ "$theme" == 'material' ]]; then
+    (
+      cd "$ROOT"/src/assets/gtk-2.0 || exit 1
+      rm -r ./assets*Material
+      ./render-assets.sh | grep -v 'exists'
+    )
+  fi
+
+  "$ROOT"/install.sh "${args[@]}"
 done
 
-find "$DEST_DIR"/Colloid* -maxdepth 0 -type d -exec cp LICENSE {} \;
+find "$DEST_DIR"/Colloid* -maxdepth 0 -type d -exec cp "$ROOT"/LICENSE {} \;
 

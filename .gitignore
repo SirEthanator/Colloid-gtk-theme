@@ -22,3 +22,4 @@ src/main/libadwaita/libadwaita-Light.css
 src/main/libadwaita/libadwaita.css
 src/sass/_color-palette-material.scss
 src/assets/gtk-2.0/material-colours
+src/assets/gtk-2.0/assets*Material
