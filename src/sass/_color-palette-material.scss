@@ -1,0 +1,63 @@
+$red-light: #ffb2b9;
+$red-dark: #8f4952;
+
+$pink-light: #e4b7f3;
+$pink-dark: #765085;
+
+$purple-light: #e4b7f3;
+$purple-dark: #765085;
+
+$blue-light: #b3c5ff;
+$blue-dark: #495d92;
+
+$teal-light: #82d3e2;
+$teal-dark: #006876;
+
+$green-light: #95d5a7;
+$green-dark: #2d6a45;
+
+$yellow-light: #b8cf84;
+$yellow-dark: #526526;
+
+$orange-light: #ffb59c;
+$orange-dark: #8f4c34;
+
+// Greys
+$grey-050: #ecedef;
+$grey-100: #dcdee1;
+$grey-150: #cbced3;
+$grey-200: #bbbfc4;
+$grey-250: #abafb6;
+$grey-300: #9a9fa8;
+$grey-350: #8a909a;
+$grey-400: #79808c;
+$grey-450: #6b717c;
+$grey-500: #5d626b;
+$grey-550: #4e535b;
+$grey-600: #40444a;
+$grey-650: #282a2f;
+$grey-700: #1d2024;
+$grey-750: #191c20;
+$grey-800: #111318;
+$grey-850: #0c0d11;
+$grey-900: #060709;
+$grey-950: #010102;
+
+// White
+$white: #e1e2e9;
+
+// Black
+$black: #111318;
+
+// Button
+$button-close: if($variant == 'light', $red-dark, $red-light);
+$button-max: if($variant == 'light', $green-dark, $green-light);
+$button-min: if($variant == 'light', $yellow-dark, $yellow-light);
+
+// Link
+$links: $blue-dark;
+
+// Theme
+$default-light: #a5c8ff;
+$default-dark: #3c6090;
+
