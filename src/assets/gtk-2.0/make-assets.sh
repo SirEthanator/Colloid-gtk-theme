@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-. ./material-colours
+. "$HOME/material_colours"
 
 for theme in '' '-Purple' '-Pink' '-Red' '-Orange' '-Yellow' '-Green' '-Teal' '-Grey'; do
   for color in '' '-Dark'; do
